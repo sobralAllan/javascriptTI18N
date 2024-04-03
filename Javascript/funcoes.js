@@ -70,7 +70,58 @@ function tabuada(){
 }//fim do método
 
 //Faça uma função para calcular a potência
+function potencia(){
+    var num1;
+    var num2;
 
+    num1 = parseInt(document.getElementById("tpNum").value);
+    num2 = parseInt(document.getElementById("tsNum").value);
+
+    document.getElementById("resultado").innerHTML = "A potência é: " + Math.pow(num1, num2);
+}
 //Faça uma função para calcular a raiz dos dois números
+function raiz(){
+    var num1;
+    var num2;
 
+    num1 = parseInt(document.getElementById("tpNum").value);
+    num2 = parseInt(document.getElementById("tsNum").value);
+
+    document.getElementById("resultado").innerHTML = "\nA raiz de " + num1 + " é: " + Math.sqrt(num1) +
+    "\nA raiz de " + num2 + " é: " + Math.sqrt(num2);
+}
 //Faça uma função para calcular a fórmula de bhaskara
+function bhaskara(){
+    var a;
+    var b;
+    var c;
+    var delta;
+    var x1;
+    var x2;
+
+    a = parseInt(document.getElementById("tpNum").value);
+    b = parseInt(document.getElementById("tsNum").value);
+    c = parseInt(document.getElementById("ttNum").value);
+
+    //1ª Calcular delta
+    delta = Math.pow(b,2) - 4 * a * c;
+
+    //2ª Parte: Calcular x1 e x2 se delta não for negativo
+    if(delta >= 0){
+        x1 = (-b + Math.sqrt(delta))/(2*a);
+        x2 = (-b - Math.sqrt(delta))/(2*a);
+    }else{
+        x1 = "Impossível calcular x1, pois o delta é negativo";
+        x2 = "Impossível calcular x2, pois o delta é negativo";
+    }
+
+    //Mostrar na tela
+    document.getElementById("resultado").innerHTML = 
+    "\nDelta: " + delta + "\n\nX1: " + x1 + "\nX2: " + x2;
+}//fim do método
+
+//Faça um programa que peça ao usuário um número e 
+//imprima se é par ou ímpar.
+
+//Faça um programa que peça ao usuário um número e imprima
+// se é positivo, negativo ou zero.
