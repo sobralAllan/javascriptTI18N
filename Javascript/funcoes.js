@@ -125,3 +125,35 @@ function bhaskara(){
 
 //Faça um programa que peça ao usuário um número e imprima
 // se é positivo, negativo ou zero.
+
+//Vetores 
+function inserir(){
+    var vetor = [];//Declaração de Vetor
+    var resultado = "";
+
+    for(i = 0; i < 10; i++){
+        vetor[i] = prompt((i+1) + "º Informe um número: ");
+    }//fim do for
+
+    for(i = 0; i < 10; i++){
+        resultado += "\n" + vetor[i];
+    }//fim do for
+
+    document.getElementById("resultado").innerHTML = resultado;
+}//fim do método
+
+function coletarRadio(){
+    var dado = document.querySelector('input[name="client"]:checked').value;
+    alert(dado);
+}//fim do método
+
+function selecionar(){
+    var select = document.getElementById('lista-conteudos');
+    select.addEventListener('change', function(){
+        alert(select.value);
+    });
+}//fim do método
+
+function coletarCheckboxes() {
+    
+}
